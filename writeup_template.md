@@ -29,7 +29,7 @@ Third, creat a create a image mask and use this image mask to mask the region of
 Forth, apply the cv2.HoughLinesP(img, rho, theta, threshold, np.array([]), minLineLength=min_line_len, maxLineGap=max_line_gap) function the extra the lines in the image. The difficult part is find the right parameters for this function. I have try many times to get the parameters that seems work, witch have been prove to be not good later while i apply it to the video. I have to spend tons of time to try all sort of the diffient combination of the parameters. 
 Fifth, draw the lines of lane on the image. Since the given draw_line function just draw all the lines the HoughLinesP produce, dons't seem to suit my need. So I modify it to take all the lines as input, get rip of the lines that definely seems to be noise, calculate the average left and right line and draw them with a lot highter thickness.
 After do all this above, I get the result images like this:
-[image2]: solidWhiteCurve.jpg
+[image2]: ./solidWhiteCurve.jpg
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
